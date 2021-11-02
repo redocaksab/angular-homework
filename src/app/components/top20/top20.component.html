@@ -1,0 +1,6 @@
+<h3>20 of the most popular films of this week</h3>
+<div *ngIf="top20?.length">
+    <div *ngFor="let title of top20; let i = index">
+        <a [routerLink]="'/movie/'+title.id">{{i+1}}. {{title.title}}</a>
+    </div>
+</div>

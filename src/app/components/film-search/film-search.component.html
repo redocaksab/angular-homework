@@ -1,0 +1,15 @@
+<form #filmSearch="ngForm">
+    <h3>Film Search</h3>
+    <input type="text" 
+    name="search" ngModel
+    (ngModelChange)="onChange(filmSearch.value.search)" 
+    autocomplete="off" />
+    <div *ngIf="titles.length">
+        <div *ngFor="let title of titles" class="titleItem">
+            <a [routerLink]="'/movie/'+title.id">{{title.title}}</a>
+        </div>
+    </div>
+    <div *ngIf="!titles.length">
+        <div>Nothing found</div>
+    </div>
+</form>

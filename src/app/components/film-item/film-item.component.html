@@ -1,0 +1,7 @@
+<h3>{{movieInf?.original_title}}</h3>
+
+<div><b>Original language: </b>{{movieInf?.original_language}}</div>
+<div><b>Overview: </b>{{movieInf?.overview}}</div>
+<div><b>Status: </b>{{movieInf?.status}}</div>
+<div><b>Budget: </b>{{movieInf?.budget | currency:"USD"}}</div>
+<div><b>Genres: </b><span *ngFor="let genre of movieInf?.genres">{{genre.name}}, </span></div>
